@@ -1,3 +1,76 @@
 AI重构的呗....构建这个项目.免费额度直接没了.增加了支持1.27b支持.干掉物品栏修改代码的子节点.直接父节点修改
 <img width="610" height="760" alt="War3Trainer_Op2UhJ1rFL" src="https://github.com/user-attachments/assets/9273a266-1d30-4223-b2e6-0db5222231d7" />
 
+
+
+## 修改器简介
+
+2011.3.12
+* 支持1.25b
+
+### V9.3
+
+2011.3.3
+* 修正了一处不必要的throw Exception，汗-_-b
+
+### V9.2
+
+2011.3.3
+* 修正了功能列表未选择时更新修改列表会崩溃的Bug
+
+### V9.1
+
+2011.3.3
+* 新增HP、MP回复的修改
+
+### [V9](https://github.com/tctianchi/War3Trainer/releases/tag/v9)
+
+2011.3.2
+* 新增武器射程的修改
+* 支持1.20.4.6074、1.21.0.6263、1.21.1.6300、1.22.0.6328、1.23.0.6352、1.24.0.6372、1.24.1.6374、1.24.2.6378、1.24.3.6384、1.24.4.6387（大部分是离不开电脑同学提供的）
+* 改为根据Game.dll判断版本（由eflay同学提供）
+
+### [V8](https://github.com/tctianchi/War3Trainer/releases/tag/v8)
+
+2009.8.15
+* 改用C#重写所有代码
+* 允许修改的游戏金钱从10家改为12家
+* 允许修改物品种类和使用次数
+* 支持1.20.4.6074、1.21.0.6263、1.21.1.6300、1.22.0.6328、1.23.0.6352、1.24.0.6372
+
+### [V7](https://github.com/tctianchi/War3Trainer/releases/tag/v7)
+
+2008.11.5
+* 为Dota修正选中单位列表的获取
+* 界面
+
+### [V6](https://github.com/tctianchi/War3Trainer/releases/tag/v6)
+
+2008.10.26
+* 无注入（当然也不是内存搜索）的新思路
+* 又可以改单位（含建筑和金矿）了
+* 支持1.20e、1.21、1.22.0.6328三个版本
+* 允许修改单位的坐标
+* 可以改一点英雄技能
+
+### [V5](https://github.com/tctianchi/War3Trainer/releases/tag/v5)
+
+2008.10.8
+* 针对魔兽3 1.22.0.6328
+* 金钱不再需要注入，可以即刻完成刷新
+* 单位只需注入一次，其他地址可以推算
+* 新增HP、MP修改
+* 限制了TextBox长度
+
+### [V4](https://github.com/tctianchi/War3Trainer/releases/tag/v4)
+
+2007.3.17
+* 下面的修改遵循“贴补丁”的方式修改程序
+* 追加攻击相关
+* 追加防御相关
+* 追加金钱相关
+
+### [V3](https://github.com/tctianchi/War3Trainer/releases/tag/v3)
+
+2007.2.4
+* 针对1.21a重新修改
