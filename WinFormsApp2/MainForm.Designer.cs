@@ -17,8 +17,7 @@
         {
             this.panelTop = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.btnFindGame = new ReaLTaiizor.Controls.MaterialButton();
-            this.btnRefresh = new ReaLTaiizor.Controls.MaterialButton();
+            this.btnFindRefresh = new System.Windows.Forms.Button();
             this.splitMain = new System.Windows.Forms.SplitContainer();
             this.treeFunctions = new System.Windows.Forms.TreeView();
             this.gridData = new System.Windows.Forms.DataGridView();
@@ -36,69 +35,52 @@
             // panelTop
             this.panelTop.BackColor = System.Drawing.Color.White;
             this.panelTop.Controls.Add(this.lblStatus);
-            this.panelTop.Controls.Add(this.btnFindGame);
-            this.panelTop.Controls.Add(this.btnRefresh);
+            this.panelTop.Controls.Add(this.btnFindRefresh);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(3, 64);
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.panelTop.Size = new System.Drawing.Size(604, 52);
+            this.panelTop.Padding = new System.Windows.Forms.Padding(12, 6, 12, 6);
+            this.panelTop.Size = new System.Drawing.Size(610, 42);
             this.panelTop.TabIndex = 0;
 
             // lblStatus
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(60, 60, 60);
-            this.lblStatus.Location = new System.Drawing.Point(12, 16);
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(90, 90, 90);
+            this.lblStatus.Location = new System.Drawing.Point(12, 11);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(110, 17);
             this.lblStatus.TabIndex = 0;
             this.lblStatus.Text = "等待查找游戏…";
 
-            // btnFindGame
-            this.btnFindGame.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFindGame.Depth = 0;
-            this.btnFindGame.DrawShadows = false;
-            this.btnFindGame.HighEmphasis = false;
-            this.btnFindGame.Icon = null;
-            this.btnFindGame.Location = new System.Drawing.Point(420, 8);
-            this.btnFindGame.Margin = new System.Windows.Forms.Padding(3);
-            this.btnFindGame.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.btnFindGame.Name = "btnFindGame";
-            this.btnFindGame.Size = new System.Drawing.Size(88, 36);
-            this.btnFindGame.TabIndex = 1;
-            this.btnFindGame.Text = "查找游戏";
-            this.btnFindGame.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Outlined;
-            this.btnFindGame.UseAccentColor = false;
-            this.btnFindGame.Click += new System.EventHandler(this.btnFindGame_Click);
-
-            // btnRefresh
-            this.btnRefresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRefresh.Depth = 0;
-            this.btnRefresh.DrawShadows = false;
-            this.btnRefresh.HighEmphasis = false;
-            this.btnRefresh.Icon = null;
-            this.btnRefresh.Location = new System.Drawing.Point(514, 8);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3);
-            this.btnRefresh.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(72, 36);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.Text = "刷新";
-            this.btnRefresh.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Outlined;
-            this.btnRefresh.UseAccentColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // btnFindRefresh
+            this.btnFindRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFindRefresh.BackColor = System.Drawing.Color.White;
+            this.btnFindRefresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(200, 205, 210);
+            this.btnFindRefresh.FlatAppearance.BorderSize = 1;
+            this.btnFindRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(245, 247, 250);
+            this.btnFindRefresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(235, 238, 242);
+            this.btnFindRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFindRefresh.ForeColor = System.Drawing.Color.FromArgb(50, 50, 50);
+            this.btnFindRefresh.Location = new System.Drawing.Point(478, 5);
+            this.btnFindRefresh.Name = "btnFindRefresh";
+            this.btnFindRefresh.Size = new System.Drawing.Size(116, 32);
+            this.btnFindRefresh.TabIndex = 1;
+            this.btnFindRefresh.Text = "查找和刷新";
+            this.btnFindRefresh.UseVisualStyleBackColor = false;
+            this.btnFindRefresh.Click += new System.EventHandler(this.btnFindRefresh_Click);
 
             // splitMain
             this.splitMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitMain.Location = new System.Drawing.Point(3, 116);
+            this.splitMain.Location = new System.Drawing.Point(0, 42);
             this.splitMain.Name = "splitMain";
             this.splitMain.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.splitMain.Size = new System.Drawing.Size(604, 641);
-            this.splitMain.SplitterDistance = 200;
-            this.splitMain.SplitterWidth = 4;
+            this.splitMain.Size = new System.Drawing.Size(610, 658);
+            this.splitMain.SplitterDistance = 210;
+            this.splitMain.SplitterWidth = 3;
             this.splitMain.TabIndex = 1;
-            this.splitMain.BackColor = System.Drawing.Color.FromArgb(235, 235, 235);
+            this.splitMain.BackColor = System.Drawing.Color.FromArgb(225, 228, 232);
 
             // splitMain.Panel1
             this.splitMain.Panel1.BackColor = System.Drawing.Color.White;
@@ -109,13 +91,13 @@
             this.treeFunctions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treeFunctions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeFunctions.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.treeFunctions.ForeColor = System.Drawing.Color.FromArgb(40, 40, 40);
+            this.treeFunctions.ForeColor = System.Drawing.Color.FromArgb(38, 38, 38);
             this.treeFunctions.FullRowSelect = true;
             this.treeFunctions.HideSelection = false;
-            this.treeFunctions.ItemHeight = 24;
+            this.treeFunctions.ItemHeight = 28;
             this.treeFunctions.Location = new System.Drawing.Point(0, 0);
             this.treeFunctions.Name = "treeFunctions";
-            this.treeFunctions.Size = new System.Drawing.Size(200, 641);
+            this.treeFunctions.Size = new System.Drawing.Size(210, 658);
             this.treeFunctions.TabIndex = 0;
             this.treeFunctions.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeFunctions_AfterSelect);
 
@@ -132,7 +114,7 @@
             this.gridData.Location = new System.Drawing.Point(0, 0);
             this.gridData.Name = "gridData";
             this.gridData.RowTemplate.Height = 30;
-            this.gridData.Size = new System.Drawing.Size(400, 641);
+            this.gridData.Size = new System.Drawing.Size(397, 658);
             this.gridData.TabIndex = 0;
             this.gridData.Visible = false;
             this.gridData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridData_CellClick);
@@ -143,23 +125,23 @@
             this.lblIntro.BackColor = System.Drawing.Color.White;
             this.lblIntro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblIntro.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblIntro.ForeColor = System.Drawing.Color.FromArgb(70, 70, 70);
+            this.lblIntro.ForeColor = System.Drawing.Color.FromArgb(90, 90, 90);
             this.lblIntro.Location = new System.Drawing.Point(0, 0);
             this.lblIntro.Name = "lblIntro";
-            this.lblIntro.Padding = new System.Windows.Forms.Padding(14);
-            this.lblIntro.Size = new System.Drawing.Size(400, 641);
+            this.lblIntro.Padding = new System.Windows.Forms.Padding(16);
+            this.lblIntro.Size = new System.Drawing.Size(397, 658);
             this.lblIntro.TabIndex = 1;
-            this.lblIntro.Text = "使用方法\r\n\r\n1. 以管理员身份运行\r\n2. 启动魔兽争霸3\r\n3. 点击「查找游戏」\r\n4. 左侧选择功能节点\r\n5. 单击「修改值」直接编辑\r\n6. 回车或点击别处立即生效\r\n\r\n单位名称 / 物品名称：\r\n单击修改值后自动填入原值（物品代码），方便复制。";
+            this.lblIntro.Text = "使用方法\r\n\r\n1. 以管理员身份运行\r\n2. 启动魔兽争霸3\r\n3. 点击「查找和刷新」\r\n4. 左侧选择功能节点\r\n5. 单击「修改值」直接编辑\r\n6. 回车或点击别处立即生效\r\n\r\n单位名称 / 物品名称：\r\n单击修改值后自动填入原值（物品代码），方便复制。";
             this.lblIntro.Visible = true;
 
             // lblEmpty
             this.lblEmpty.BackColor = System.Drawing.Color.White;
             this.lblEmpty.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEmpty.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblEmpty.ForeColor = System.Drawing.Color.Gray;
+            this.lblEmpty.ForeColor = System.Drawing.Color.FromArgb(140, 140, 140);
             this.lblEmpty.Location = new System.Drawing.Point(0, 0);
             this.lblEmpty.Name = "lblEmpty";
-            this.lblEmpty.Size = new System.Drawing.Size(400, 641);
+            this.lblEmpty.Size = new System.Drawing.Size(397, 658);
             this.lblEmpty.TabIndex = 2;
             this.lblEmpty.Text = "当前节点没有可修改的数据";
             this.lblEmpty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -168,8 +150,8 @@
             // MainForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(610, 760);
+            this.BackColor = System.Drawing.Color.FromArgb(244, 245, 247);
+            this.ClientSize = new System.Drawing.Size(610, 700);
             this.Controls.Add(this.splitMain);
             this.Controls.Add(this.panelTop);
             this.MinimumSize = new System.Drawing.Size(520, 600);
@@ -192,8 +174,7 @@
 
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label lblStatus;
-        private ReaLTaiizor.Controls.MaterialButton btnFindGame;
-        private ReaLTaiizor.Controls.MaterialButton btnRefresh;
+        private System.Windows.Forms.Button btnFindRefresh;
         private System.Windows.Forms.SplitContainer splitMain;
         private System.Windows.Forms.TreeView treeFunctions;
         private System.Windows.Forms.DataGridView gridData;

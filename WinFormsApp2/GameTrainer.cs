@@ -213,14 +213,15 @@ namespace War3Trainer
             AddAddress(unitNode, "坐标 - X", coordAddr, AddressValueType.Float);
             AddAddress(unitNode, "坐标 - Y", coordAddr + 4, AddressValueType.Float);
 
+            // 顺序：英雄属性 → 战斗属性 → 物品列表
+            if (_heroAttr > 0)
+                AddHeroAttributes(mem, unitNode);
+
             if (_attackAttr > 0)
             {
                 AddAttackAttributes(unitNode);
                 AddItems(mem, unitNode);
             }
-
-            if (_heroAttr > 0)
-                AddHeroAttributes(mem, unitNode);
         }
 
         private void AddAttackAttributes(int parent)
@@ -278,6 +279,7 @@ namespace War3Trainer
             int list = mem.ReadInt32((IntPtr)(_thisUnit + _ctx.ItemsListOffset));
             if (list == 0) return;
 
+            int itemIndex = 0;
             for (int i = 0; i < 6; i++)
             {
                 int tmp = mem.ReadInt32((IntPtr)(list + 0xC * i + 0x70));
@@ -290,11 +292,17 @@ namespace War3Trainer
                 _currentItem = mem.ReadUInt32((IntPtr)(raw + 0x54));
                 if (_currentItem == 0) continue;
 
-                string itemName = mem.ReadChar4((IntPtr)(_currentItem + 0x30));
-                int itemNode = AddNode(listParent, "0x" + _currentItem.ToString("X") + ": " + itemName);
+                itemIndex++;
+                // string itemName = mem.ReadChar4((IntPtr)(_currentItem + 0x30));
 
-                AddAddress(itemNode, "物品名称", _currentItem + 0x30, AddressValueType.Char4);
-                AddAddress(itemNode, "使用次数", _currentItem + 0x84, AddressValueType.Integer);
+                // 保留原有子节点（可单独点进某个物品）
+                // int itemNode = AddNode(listParent, "0x" + _currentItem.ToString("X") + ": " + itemName);
+                // AddAddress(itemNode, "物品名称", _currentItem + 0x30, AddressValueType.Char4);
+                // AddAddress(itemNode, "使用次数", _currentItem + 0x84, AddressValueType.Integer);
+
+                // 同时挂到「物品列表」父节点，点击时右侧直接显示全部
+                AddAddress(listParent, "物品" + itemIndex + " - 名称", _currentItem + 0x30, AddressValueType.Char4);
+                AddAddress(listParent, "物品" + itemIndex + " - 使用次数", _currentItem + 0x84, AddressValueType.Integer);
             }
         }
 

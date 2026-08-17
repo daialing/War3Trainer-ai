@@ -1,29 +1,38 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<SupportedOSPlatformVersion>6.1</SupportedOSPlatformVersion>
+		<RollForward>Major</RollForward>
+		<UseWindowsForms>true</UseWindowsForms>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<PlatformTarget>x86</PlatformTarget>
+		<RuntimeIdentifier>win-x86</RuntimeIdentifier>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net10.0-windows</TargetFramework>
-    <SupportedOSPlatformVersion>6.1</SupportedOSPlatformVersion>
-    <RollForward>Major</RollForward>
-    <UseWindowsForms>true</UseWindowsForms>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PlatformTarget>x86</PlatformTarget>
-    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
-    <Nullable>disable</Nullable>
-    <ImplicitUsings>disable</ImplicitUsings>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 
-    <!-- 单文件发布，不打包 .NET 运行时 -->
-    <PublishSingleFile>true</PublishSingleFile>
-    <SelfContained>false</SelfContained>
-    <EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
+		<!-- 单文件发布，不打包 .NET 运行时 -->
+		<PublishSingleFile>true</PublishSingleFile>
+		<SelfContained>false</SelfContained>
+		<EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
+		<NoWarn>$(NoWarn);SYSLIB0003;SYSLIB0004;SYSLIB0051;CS0672;CA1416</NoWarn>
+		<StartupObject>War3Trainer.Program</StartupObject>
+		<ApplicationIcon>4k3nu-x06ad-001.ico</ApplicationIcon>
+		<UseWPF>False</UseWPF>
 
-    <NoWarn>$(NoWarn);SYSLIB0003;SYSLIB0004;SYSLIB0051;CS0672;CA1416</NoWarn>
-    <StartupObject>War3Trainer.Program</StartupObject>
-  </PropertyGroup>
+		<!-- 版本号配置 -->
+		<Version>0.0.1</Version>
+		<AssemblyVersion>0.0.1</AssemblyVersion>
+		<FileVersion>0.0.1</FileVersion>
+		<InformationalVersion>0.0.1</InformationalVersion>
+		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="ReaLTaiizor" Version="3.8.2.1" />
-  </ItemGroup>
-
+	<ItemGroup>
+		<Content Include="4k3nu-x06ad-001.ico" />
+		<!-- 递归打包 Icons 文件夹及所有子文件夹下的文件 -->
+		<EmbeddedResource Include="Icons\**\*" />
+	</ItemGroup>
+	
 </Project>
