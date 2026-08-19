@@ -1,6 +1,6 @@
 # War3Trainer(WarCraft III Trainer)
 
-AI重构的呗....构建这个项目.免费额度直接没了.增加了支持1.27b支持.干掉物品栏修改代码的子节点.直接父节点修改
+现在仅支持在x64 windows 10 以及以上版本.修改器改为X64
 <img width="612" height="732" alt="War3Trainer_GjCflCkiEQ" src="https://github.com/user-attachments/assets/523afff9-5c13-4d37-bf8a-b2f7af07efc3" />
 
 
