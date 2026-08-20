@@ -30,42 +30,6 @@
 * 1.28（1.28.0.7205）
 * 1.28f（1.28.5.7680）
 
-## 历史程序版本
-没版本更新就是增加了1.27.1.7085支持
-### [V15](https://github.com/tctianchi/War3Trainer/releases/tag/v15)
-
-2017.8.27
-* 对.net Framework的依赖由2.0改为4.6.1，因为win 10已不再默认安装2.0
-* 支持1.28f
-* 撤销对网易的兼容
-
-### [V14](https://github.com/tctianchi/War3Trainer/releases/tag/v14)
-
-2017.4.22
-* 主动获得管理员权限
-* 兼容网易对战平台（dz.163.com）
-* 支持1.28
-
-### [V13](https://github.com/tctianchi/War3Trainer/releases/tag/v13)
-
-2016.8.12
-* 支持1.27a
-
-### [V12](https://github.com/tctianchi/War3Trainer/releases/tag/v12)
-
-2014.1.4
-* 支持1.26
-
-### [V11](https://github.com/tctianchi/War3Trainer/releases/tag/v11)
-
-2011.4.6
-* 新增对win7 x64的支持
-* 修正了修改列表焦点与选择项不一致的Bug
-
-### [V10](https://github.com/tctianchi/War3Trainer/releases/tag/v10)
-
-2011.3.12
-* 支持1.25b
 
 ### V9.3
 
